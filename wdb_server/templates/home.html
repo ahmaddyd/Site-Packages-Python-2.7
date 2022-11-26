@@ -1,0 +1,134 @@
+{% extends _layout.html %}
+
+{% block script %}
+  <script src="{{ static_url('javascripts/' + ('home.js' if options.unminified else 'wdb/home.min.js')) }}"></script>
+{% end %}
+
+{% block css %}
+  <link href="{{ static_url('stylesheets/home.css') }}" rel="stylesheet" type="text/css">
+{% end %}
+
+{% block main %}
+<!-- Simple header with scrollable tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header cover">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">wdb</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#sessions" class="mdl-layout__tab is-active">Active sessions</a>
+      <a href="#breaks" class="mdl-layout__tab">Breakpoints</a>
+      <a href="#processes" class="mdl-layout__tab">Processes</a>
+      <a href="#trace" class="mdl-layout__tab">Trace file</a>
+
+      {% if StyleHandler.themes %}
+        <a href="#scroll-tab-5" class="mdl-layout__tab">Styles</a>
+      {% end %}
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="sessions">
+      <div class="page-content">
+        <table class="sessions mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+          <thead>
+            <tr>
+              {% if options.show_filename %}
+                <th class="mdl-data-table__cell--non-numeric filename-head">File</th>
+              {% end %}
+              <th class="mdl-data-table__cell--non-numeric">Session id</th>
+              <th class="mdl-data-table__cell--non-numeric">Socket open</th>
+              <th class="mdl-data-table__cell--non-numeric">Websocket open</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="breaks">
+      <div class="page-content">
+        <table class="breakpoints mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+          <thead>
+            <tr>
+              <th>File</th>
+              <th>Line number</th>
+              <th>Condition</th>
+              <th>Function</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="processes">
+      <div class="page-content">
+        <table class="processes mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+          <thead>
+            <tr>
+              <th>Pid</th>
+              <th>User</th>
+              <th>Command Line</th>
+              <th>Time</th>
+              <th>Memory</th>
+              <th>Cpu</th>
+              <th>Thread ID</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <aside class="note">
+          Pausing a running process requires gdb and a ptrace enabled kernel.
+          <br>
+          You can enable it with:
+          <code>
+            $ echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+          </code>
+          <br>
+          (This is a potential security breach, please remember to disable it after.)
+        </aside>
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="trace">
+      <div class="page-content">
+        <form class="runfile">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" name="debug_file" id="debug_file" />
+            <label class="mdl-textfield__label" for="debug_file">File to run</label>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit">
+              Debug
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    {% if StyleHandler.themes %}
+      <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+        <div class="page-content">
+          <form method="post">
+            <select name="theme">
+              {% for theme in StyleHandler.themes %}
+                <option value="{{ theme }}"{{ ' selected' if theme == StyleHandler.theme else '' }}>{{ theme.title() }} Theme</option>
+              {% end %}
+            </select>
+            <input type="submit" value="Change" />
+          </form>
+        </div>
+      </section>
+    {% end %}
+    <div class="open-shell">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+        <i class="material-icons">computer</i>
+      </button>
+    </div>
+  </main>
+</div>
+
+{% end %}

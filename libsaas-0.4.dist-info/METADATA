@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: libsaas
+Version: 0.4
+Summary: Abstraction library for SaaS APIs
+Home-page: http://libsaas.net/
+Author: Ducksboard
+Author-email: libsaas@ducksboard.com
+Maintainer: Ducksboard
+Maintainer-email: libsaas@ducksboard.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+libsaas
+==========
+
+A library to take the pain out of using SaaS APIs.
+
+It provides an abstraction layer on top of various APIs, taking care of
+constructing the URLs, serializing parameters and authentication. You just call
+Python methods and receive Python objects.
+
+It's like an ORM for SaaS!
+
+Libsaas is built by Ducksboard_ and distributed under the MIT license. You can
+file bugs in the `issue tracker`_, browse the documentation_ or help out by
+contributing support for new services.
+
+.. _Ducksboard: http://ducksboard.com/
+.. _issue tracker: https://github.com/ducksboard/libsaas/issues
+.. _documentation: http://docs.libsaas.net/
+
+

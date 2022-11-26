@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: log-colorizer
+Version: 2.0.0
+Summary: A color formater for python logging
+Home-page: UNKNOWN
+Author: Kozea
+Author-email: florian.mounier@kozea.fr
+License: BSD
+Platform: Any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: colorama
+
+Log colorizer
+
+

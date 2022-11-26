@@ -1,0 +1,37 @@
+Duplicity Authors
+-----------------
+
+- Aaron Whitehouse <code@whitehouse.kiwi.nz>
+- Alexander Zangerl <az@snafu.priv.at>
+- Andrea Grandi <a.grandi@gmail.com>
+- Ben Escoto <ben@emerose.org>
+- Carlos Abalde <carlos.abalde@gmail.com>
+- Dmitry Nezhevenko <dion@dion.org.ua>
+- Edgar Soldin <edgar.soldin@web.de>
+- Eric EJ Johnson <ej.johnson@rackspace.com>
+- Fabian Topfstedt <topfstedt@schneevonmorgen.com>
+- Frank J. Tobin <ftobin@neverending.org>
+- Germar Reitze <germar.reitze@gmail.com>
+- Gu1
+- Havard Gulldahl
+- Henrique Carvalho Alves <hcarvalhoalves@gmail.com>
+- Hynek Schlawack
+- Ian Barton <ian@manor-farm.org>
+- J.P. Krauss <jkrauss@asymworks.com>
+- jno <jno@pisem.net>
+- Kenneth Loafman <kenneth@loafman.com>
+- Marcel Pennewiss <opensource@pennewiss.de>
+- Matthew Bentley
+- Matthieu Huin <mhu@enovance.com>
+- Michael Stapelberg <stapelberg+duplicity@google.com>
+- Michael Terry <mike@mterry.name>
+- Peter Schuller <peter.schuller@infidyne.com>
+- Roman Yepishev <rye@keypressure.com>
+- Scott McKenzie <noizyland@gmail.com>
+- Stefan Breunig <stefan-duplicity@breunig.xyz>
+- Steve Tynor <steve.tynor@gmail.com>
+- Thomas Harning Jr <harningt@gmail.com>
+- Tomas Vondra (Launchpad id: tomas-v)
+- Xavier Lucas <xavier.lucas@corp.ovh.com>
+- Yigal Asnis
+- Mathieu Le Marec - Pasquet <kiorky@cryptelium.net>
